@@ -14,7 +14,7 @@ My scheduler may be used as such : python3 scheduler.py <MAX_PROCESSING_TIME_SEC
 
 Given the NP hardness of the problem, I used several heuristic approaches that include :
 - backtracking with pruning (invalid states are pruned)
-- sorting the list of the processors on the current at each iteration by the finish time of the last task on each processor
+- sorting the list of the processors of the current state at each iteration by the finish time of the last task on each processor
 - arc-consistency
 - sorting the list of the unscheduled tasks by their level in the current topological order of the set of unscheduled tasks:
   * here we use a modified version of Kahn's algorithm to incrementally find the level of a vertex, where level(vertex) = max(predecessor_level) + 1
